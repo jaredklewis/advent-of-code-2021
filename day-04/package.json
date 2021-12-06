@@ -1,0 +1,12 @@
+{
+  "name": "day-05",
+  "version": "1.0.0",
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@types/node": "^16.11.11"
+  }
+}
