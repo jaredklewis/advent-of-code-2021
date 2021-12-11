@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # --- Day 1: Sonar Sweep ---
 
 # You're minding your own business on a ship at sea when the overboard alarm goes
@@ -62,7 +64,6 @@
 
 # How many measurements are larger than the previous measurement?
 
-
 content = File.read("data.txt")
 
 measurements = content.split("\n").map(&:to_i)
@@ -70,11 +71,9 @@ measurements = content.split("\n").map(&:to_i)
 def count_increases(array)
   increases = 0
   array.each_with_index do |m, index|
-    next if index == 0
+    next if index.zero?
 
-    if m > array[index - 1]
-      increases += 1
-    end
+    increases += 1 if m > array[index - 1]
   end
 
   increases
@@ -142,6 +141,5 @@ end
 sums = windows.map do |window|
   window.inject(0, :+)
 end
-
 
 puts "Total window increases: #{count_increases(sums)}"
