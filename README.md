@@ -10,6 +10,7 @@ Puzzles organized by language:
 ## Kotlin
 - [Day 3](./day-03)
 - [Day 8](./day-08)
+- [Day 12](./day-12)
 
 
 ## Python
