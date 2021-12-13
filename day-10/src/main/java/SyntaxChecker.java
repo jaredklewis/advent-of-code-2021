@@ -18,10 +18,7 @@ public class SyntaxChecker {
 
             // Part one example
             SyntaxChecker exampleChecker = new SyntaxChecker(example);
-            int exampleErrorScore = exampleChecker.scoreErrors();
-            if (exampleErrorScore != 26397) {
-                throw new AssertionError("Part one example incorrect, got score of " + exampleErrorScore);
-            }
+            assertExample("Part one example", 26397, exampleChecker.scoreErrors());
 
             // Part one
             SyntaxChecker checker = new SyntaxChecker(input);
@@ -29,10 +26,7 @@ public class SyntaxChecker {
             System.out.println("Part one - error score: " + errorScore);
 
             // Part two example
-            long exampleCompletionScore = exampleChecker.scoreCompletion();
-            if (exampleCompletionScore != 288957) {
-                throw new AssertionError("Part one example incorrect, got score of " + exampleCompletionScore);
-            }
+            assertExample("Part two example", 288957, exampleChecker.scoreCompletion());
 
             // Part two
             long completionScore = checker.scoreCompletion();
@@ -85,8 +79,7 @@ public class SyntaxChecker {
         String close = ")]}>";
         char[] chars = line.toCharArray();
 
-        for (int i = 0; i < chars.length; i++) {
-            char c = chars[i];
+        for (char c : chars) {
             if (open.indexOf(c) >= 0) {
                 stack.push(Delimiter.fromChar(c));
             } else if (close.indexOf(c) >= 0) {
@@ -105,6 +98,14 @@ public class SyntaxChecker {
         }
 
         return completion;
+    }
+
+    private static void assertExample(String name, long expected, long actual) {
+        if (actual != expected) {
+            throw new IllegalStateException(
+                String.format("%s incorrect. Expected: %d - Actual: %d", name, expected, actual)
+            );
+        }
     }
 
     private static List<String> loadInput(String name) throws IOException {
