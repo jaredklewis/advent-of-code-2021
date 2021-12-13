@@ -1,9 +1,3 @@
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class Main {
     public static void main(String[] args) {
         try {
@@ -37,15 +31,5 @@ public class Main {
                 String.format("%s incorrect. Expected: %d - Actual: %d", name, expected, actual)
             );
         }
-    }
-
-    public static int doSomething() {
-        return 0;
-    }
-
-    private static List<String> loadInput(String name) throws IOException {
-        InputStream inputStream = Main.class.getClassLoader().getResourceAsStream(name);
-        String text = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
-        return text.lines().map(String::strip).collect(Collectors.toList());
     }
 }
