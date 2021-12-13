@@ -5,6 +5,7 @@ Puzzles organized by language:
 ## Java
 - [Day 6](./day-06)
 - [Day 10](./day-10)
+- [Day 13](./day-13)
 
 
 ## Kotlin
