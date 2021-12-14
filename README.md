@@ -28,3 +28,4 @@ Puzzles organized by language:
 ## TypeScript (nodejs)
 - [Day 4](./day-04)
 - [Day 5](./day-05)
+- [Day 14](./day-14)
