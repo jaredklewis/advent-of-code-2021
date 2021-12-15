@@ -17,6 +17,7 @@ Puzzles organized by language:
 ## Python
 - [Day 2](./day-02)
 - [Day 9](./day-09)
+- [Day 15](./day-15)
 
 
 ## Ruby
