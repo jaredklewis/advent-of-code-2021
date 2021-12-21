@@ -31,3 +31,4 @@ Puzzles organized by language:
 - [Day 4](./day-04)
 - [Day 5](./day-05)
 - [Day 14](./day-14)
+- [Day 21](./day-21)
