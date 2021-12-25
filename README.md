@@ -6,6 +6,7 @@ Puzzles organized by language:
 - [Day 6](./day-06)
 - [Day 10](./day-10)
 - [Day 13](./day-13)
+- [Day 22](./day-22)
 
 
 ## Kotlin
